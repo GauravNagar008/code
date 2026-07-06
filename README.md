@@ -4,11 +4,10 @@ First Git Repository
 #include <iostream>
 
 bool isPalindrome(int num) {
-    // Negative numbers are not palindromes (e.g., -121 reversed is 121-)
     if (num < 0) return false;
 
     int originalNum = num;
-    long reversedNum = 0; // Use long to prevent potential integer overflow
+    long reversedNum = 0; 
 
     while (num > 0) {
         int lastDigit = num % 10;
@@ -16,7 +15,6 @@ bool isPalindrome(int num) {
         num /= 10;
     }
 
-    // If the original number and reversed number are equal, it's a palindrome
     return originalNum == reversedNum;
 }
 
